@@ -6,11 +6,41 @@
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .name-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px;
+        padding-left: 200px;
+       
+}
+
+    .name {
+        font-size: 6rem; 
+        font-weight: bold; 
+        letter-spacing: 2px; 
+        text-align: center;
+        color: #000000;
+        font-family: system-ui;
+        
+}
 </style>
 
-<div class="example-wrapper">
-    <h1>Paul Gauthier </h1>
-
-    This friendly message is coming from:
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Présentation</title>
+</head>
+<body>
+<div class="name-container">
+    <p class="name">Paul Gauthier</p>
 </div>
+<div class="card bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h4 class="card-title">Secondary card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</body>
 {% endblock %}
