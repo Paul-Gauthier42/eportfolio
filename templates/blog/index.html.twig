@@ -6,121 +6,141 @@
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+    
+
     .name-container {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 200px;
-       
+        align-items: left;
+        justify-content: left;
+        padding-top: 50px;
+        padding-left: 100px
 }
+
+
     .name-container2 {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 200px;
+        align-items: left;
+        justify-content: left;
         padding-bottom: 20px;
-
-}
-    .name2 {
-        font-size: 6rem; 
-        font-weight: bold; 
-        letter-spacing: 2px; 
-        text-align: center;
-        color: #000000;
-        font-family: system-ui;
-
-        
 }
 
     .name {
-        font-size: 6rem; 
-        font-weight: bold; 
-        letter-spacing: 2px; 
+        font-size: 6rem;
+        font-weight: bold;
+        letter-spacing: 2px;
         text-align: center;
         color: #000000;
-        font-family: system-ui;
+        font-family: system-ui, sans-serif;
+        padding-bottom: 200px;
+    }
 
-        
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    margin: 20px;
-    padding-left: 500px;
-}
+    .name2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #000000;
+        font-family: system-ui, sans-serif;
+    }
 
-/* Carte individuelle (div avec image et titre) */
-.card {
-    width: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; 
+        align-items: center; 
+        margin: 20px auto;
 }
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Image de la carte */
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.container2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; 
+        align-items: center; 
+        margin-left:22rem;
+        margin-right:22rem;
+        padding-left:1rem;
+        background: #ffffff;
 }
 
-/* Titre de la carte */
-.card h3 {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #333;
-    padding: 15px 0;
-    background-color: #f4f4f4;
-    margin: 0;
-}
+    .card {
+        width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Lien cliquable */
-.card a {
-    text-decoration: none;
-    color: inherit;
-}
+    .card:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+        padding: 15px 0;
+        background-color: #f4f4f4;
+        margin: 0;
+    }
+
+    .card a {
+        text-decoration: none;
+        color: inherit;
+    }
 </style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paul Gauthier's ePortfolio - A student passionate about math, R&T, and programming.">
+    <meta name="keywords" content="Paul Gauthier, ePortfolio, student, R&T, mathematics, programming, Saint Bonnet le Chateau">
     <title>Page de Présentation</title>
 </head>
 <body>
-<div class="name-container">
-    <p class="name">Paul Gauthier</p>
-</div>
-<div class="name-container2">
-<p class=">Je suis un etudiants en premiére anner du BUT R&T a l'IUT de Roanne<p/>
+    <div class="name-container">
+        <p class="name">Paul Gauthier</p>
+    </div>
+    <div class="container2">
+        <div class="name-container2">
+            <p class="name2">Bienvenue sur mon Eportfolio</p>
+        </div>
+        <div> 
+            <p>Je me présente, Paul Gauthier, étudiant en R&T. J'ai 17 ans et j'habite à Saint-Bonnet-le-Château, dans la Loire. Je suis passionné par les mathématiques et je suis actuellement en première année.
+            J'ai choisi cette filière car elle correspond à mes passions et à mes aspirations professionnelles.</p>
+            <h4>Mes objectifs</h4>
+            <p>
+            j'espere pouvoir avoir aqcis des competence est un savoir solide dans differents dommaine informatique
+            j'espere pouvoir obtenir une deboucher interesante  
+            </p>
+        </div>
+    </div>
 
-</div>
     <div class="container">
         <div class="card">
             <a href="https://www.example1.com">
-                <img src="image/connecter.jpg" alt="Image 1">
-                <h3>connecter</h3>
+                <img src="image/connecter.jpg" alt="Image représentant la connexion">
+                <h3>Connecter</h3>
             </a>
         </div>
         <div class="card">
             <a href="https://www.example2.com">
-                <img src="image/administrer.jpg" alt="Image 2">
-                <h3>administrer</h3>
+                <img src="image/administrer.jpg" alt="Image représentant l'administration">
+                <h3>Administrer</h3>
             </a>
         </div>
         <div class="card">
             <a href="https://www.example3.com">
-                <img src="image/programer.jpg" alt="Image 3">
-                <h3>programer</h3>
+                <img src="image/programer.jpg" alt="Image représentant la programmation">
+                <h3>Programmer</h3>
             </a>
         </div>
     </div>
