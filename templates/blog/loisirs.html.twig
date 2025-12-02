@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damier Vertical : Images à gauche, Textes à droite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-left: 20rem;
+            margin-right: 20rem;
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            margin: 10px 0;
+        }
+
+        .zone {
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 48%;
+        }
+
+        .image-zone img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .zone-texte {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1> 🎉 Mes loisirs </h1>
+    
+    <div class="container">
+        <div class="row">
+            <div class="zone image-zone">
+            <img src="{{ asset('image/vtt.jpg') }}" alt="Image représentant l'administration">
+            </div>
+            <div class="zone zone-texte">
+                <p>je pratique pas mal de vtt notaments les weekend se qui me permets de relacher la pression ainsi que de me defouler</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="zone image-zone">
+                    <img src="{{ asset('image/chasse.jpg') }}" alt="Image 2">
+            </div>
+            <div class="zone zone-texte">
+                <p>Je suis également chasseur dans la commune de Magneux-Haute-Rive, dans la Loire. Cette activité me permet de prendre l'air tout en renforçant la cohésion au sein du groupe</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="zone image-zone">
+                    <img src="https://via.placeholder.com/300" alt="Image 3">
+            </div>
+            <div class="zone zone-texte">
+                <p>Voici un texte dans la troisième zone.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock %}
