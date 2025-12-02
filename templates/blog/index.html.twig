@@ -13,8 +13,9 @@
         display: flex;
         align-items: left;
         justify-content: left;
-        padding-top: 50px;
-        padding-left: 100px
+        padding-top: 80px;
+        padding-left: 200px;
+        flex-direction: row;
 }
 
 
@@ -57,19 +58,29 @@
         gap: 20px;
         justify-content: center; 
         align-items: center; 
-        margin-left:22rem;
-        margin-right:22rem;
+        margin-left:30rem;
+        margin-right:30rem;
         padding-left:1rem;
         background: #ffffff;
 }
 
     .card {
-        width: 250px;
+        width: 300px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #fff;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image{
+        align-items: right;
+        margin-left:15rem; 
+        margin-bottom:8rem;
+        width: 300px;        
+        height: 350px;
+        border-radius: 50%;  
+        object-fit: cover;
+
     }
 
     .card:hover {
@@ -108,18 +119,25 @@
 <body>
     <div class="name-container">
         <p class="name">Paul Gauthier</p>
+        <img class="image" src="image/moi.jpg" alt="Image représentant la connexion">
     </div>
     <div class="container2">
         <div class="name-container2">
-            <p class="name2">Bienvenue sur mon Eportfolio</p>
+            <p class="name2"><b>Bienvenue sur mon Eportfolio</b></p>
         </div>
         <div> 
-            <p>Je me présente, Paul Gauthier, étudiant en R&T. J'ai 17 ans et j'habite à Saint-Bonnet-le-Château, dans la Loire. Je suis passionné par les mathématiques et je suis actuellement en première année.
+            <h4>Moi</h4>
+            <p>Je me présente, Paul Gauthier, étudiant en R&T.<br> J'ai 17 ans et j'habite à Saint-Bonnet-le-Château, dans la Loire. Je suis passionné par les mathématiques et je suis actuellement en première année.
             J'ai choisi cette filière car elle correspond à mes passions et à mes aspirations professionnelles.</p>
             <h4>Mes objectifs</h4>
             <p>
             j'espere pouvoir avoir aqcis des competence est un savoir solide dans differents dommaine informatique
-            j'espere pouvoir obtenir une deboucher interesante  
+            j'espere pouvoir obtenir une deboucher interesante<br><br>
+            L'objectif de ce site internet est de me présenter de différentes manières.<br>
+            Vous pourrez donc découvrir mon parcours pendant ma première année de BUT, ainsi que mes loisirs et activités. Vous y trouverez également mon CV.
+
+
+
             </p>
         </div>
     </div>
