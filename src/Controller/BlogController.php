@@ -21,4 +21,10 @@ final class BlogController extends AbstractController
         return $this->render('blog/loisirs.html.twig', [   
         ]);  
     }  
+    #[Route('/blog/home/cv', name: 'app_home')] 
+    public function cv() : response 
+    {  
+        return $this->render('blog/cv.html.twig', [   
+        ]);  
+    }  
 }
