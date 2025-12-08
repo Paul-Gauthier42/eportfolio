@@ -16,15 +16,17 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            margin-left: 20rem;
+            margin-left: 10rem;
             margin-right: 20rem;
+            padding: 20px;  
+            
         }
 
         .row {
             display: flex;
             width: 100%;
             height: 400px;
-            margin: 10px ;
+            margin-bottom: 60px;
         }
 
         .zone {
@@ -32,17 +34,23 @@
             padding: 20px;
             box-sizing: border-box;
             width: 48%;
+           
+            
         }
 
         .image-zone img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         .zone-texte {
             font-size: 18px;
-            text-align: center;
+            text-align: left;
+            color: #333;
+            padding-top: 70px
+            
         }
 
         h1 {
@@ -62,7 +70,7 @@
             <img src="{{ asset('image/vtt.jpg') }}" alt="Image représentant l'administration">
             </div>
             <div class="zone zone-texte">
-                <p>je pratique pas mal de vtt notaments les weekend se qui me permets de relacher la pression ainsi que de me defouler</p>
+                <p>je pratique pas mal de vtt notaments les weekend se qui me permets de relacher la pression ainsi que de me defouler, j’entretiens donc une bonne condition physique tout en développant mon endurance et ma gestion de l’effort.<br><br>Cette activité m’apprend à garder le contrôle dans des situations imprévisibles et à faire preuve de persévérance. Elle renforce aussi mon goût pour le défi et ma capacité à maintenir un rythme soutenu.</p>
             </div>
         </div>
 
@@ -71,16 +79,17 @@
                     <img src="{{ asset('image/chasse.jpg') }}" alt="Image 2">
             </div>
             <div class="zone zone-texte">
-                <p>Je suis également chasseur dans la commune de Magneux-Haute-Rive, dans la Loire. Cette activité me permet de prendre l'air tout en renforçant la cohésion au sein du groupe</p>
+            <p>Je suis également chasseur dans la commune de Magneux-Haute-Rive, dans la Loire. La chasse est un loisir qui m’apporte sens de l’observation, patience et maîtrise de soi. <br><br>Elle me permet de développer une bonne connaissance de l’environnement et de la sécurité, tout en renforçant ma capacité à prendre des décisions réfléchies. Ce hobby m’aide également à cultiver la rigueur et la concentration, des qualités utiles dans mon travail.</p>
             </div>
         </div>
+        
 
         <div class="row">
             <div class="zone image-zone">
                     <img src="{{ asset('image/sport.jpg') }}" alt="Image 2">
             </div>
             <div class="zone zone-texte">
-                <p>je fais aussi pas mal de sportds tout les soir apres le travaille afin de me changer l'esprit</p>
+                <p>La musculation fait partie de ma routine hebdomadaire et m’apporte discipline, constance et force mentale. Grâce à cet entraînement, j’ai développé ma motivation et de la gestion d’objectifs.<br><br>Ce loisir contribue également à mon bien-être général, ce qui se reflète dans mon efficacité professionnelle.</p>
             </div>
         </div>
     </div>
