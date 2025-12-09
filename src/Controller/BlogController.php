@@ -31,6 +31,14 @@ final class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
+    
+    #[Route('/com', name: 'app_com')]
+    public function com(): Response
+    {
+        return $this->render('blog/competence.html.twig', [
+            'controller_name' => 'BlogController',
+        ]);
+    }
 
     
 }

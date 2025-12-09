@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paul Gauthier{% endblock %}
+
+{% block body %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Homme</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .container {
+      background: #ffffff;
+      width: 70%;
+      max-width: 900px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 10rem;
+    }
+    .top-section {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .top-section img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .text-zone {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .bloc-texte {
+      background: #e9e9e9;
+      padding: 15px;
+      border-radius: 8px;
+      min-height: 80px;
+    }
+    @media (max-width: 768px) {
+    .top-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .top-section img {
+      width: 60%;
+      max-width: 250px;
+    }
+    .text-zone {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="{{ asset('image/SAE1.01.jpg') }}" alt="Image" />
+      <div class="texte-droite">
+        <h2>SAE 1.01</h2>
+        <p>
+          cette SAE avaits pour but de nous informer sur les dangers est les possibiliter d'attaque dun resaux informatique  
+        </p>
+      </div>
+    </div>
+
+    <div class="text-zone">
+      <div class="bloc-texte"><h4>Travail realisé</h4><br>Durant cette SAE, nous avons réalisé une formation sur le MOOC de l’ANSSI afin d’apprendre les différentes attaques possibles sur un réseau. Ensuite, nous avons été évalués lors d’une présentation orale portant sur ces dernières.</div>
+      <div class="bloc-texte"><h4>Competence dévelopé</h4><br>Compréhension des principales attaques réseau.Analyse des vulnérabilités et des risques.Application des bonnes pratiques de cybersécurité.Communication orale claire et structurée.Travail autonome et esprit de synthèse.</div>
+      <div class="bloc-texte"><h4>Mon ressentie</h4><br>texte</div>
+    </div>
+  </div>
+</body>
+{% endblock %}

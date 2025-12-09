@@ -3,7 +3,7 @@
     <head>
          
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Paul Gauthier{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
          <link rel= "stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
         {% block stylesheets %}
@@ -30,24 +30,39 @@
                         <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:8000/cv">CV</a>
                         </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">competence</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">connecter</a>
-                            <a class="dropdown-item" href="#">administrer</a>
-                            <a class="dropdown-item" href="#">programer</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
+                        <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/com">competence</a>
                         </li>
+                        <div class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown()">Menu ▼</button>
+                        <div class="dropdown-content" id="myDropdown">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                        </div>
+                        </div>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">mode</button>
                     </form>
                     </div>
                 </div>
             </nav>
+            <script>
+                function toggleDropdown() {
+                    document.getElementById("myDropdown").style.display =
+                    document.getElementById("myDropdown").style.display === "block"
+                        ? "none"
+                        : "block";
+                }
+
+                // Ferme le menu si on clique ailleurs
+                window.onclick = function(e) {
+                    if (!e.target.matches('.dropdown-btn')) {
+                    document.getElementById("myDropdown").style.display = "none";
+                    }
+                }
+            </script>
     </head> 
     <body>
     {% block body %}{% endblock %}
@@ -85,6 +100,39 @@
             font-size: 18px;
             margin: 0 15px;
         }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
     </style>
     <footer>
         <p>&copy; 2025 Mon Site Web - Tous droits réservés.</p>
