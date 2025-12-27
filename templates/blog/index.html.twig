@@ -11,6 +11,8 @@
     body {
         margin: 0;
         font-family: system-ui, sans-serif;
+        background-color: var(--bs-body-bg);
+        color: var(--bs-body-color);
     }
 
     .name-container {
@@ -26,7 +28,7 @@
         font-size: clamp(2.5rem, 5vw, 6rem);
         font-weight: bold;
         letter-spacing: 2px;
-        color: #000000;
+        color: var(--name-color);
         margin: 0;
         text-align: center;
     }
@@ -39,11 +41,14 @@
     }
 
     .container2 {
-        max-width: 900px;
-        margin: 0 auto 40px;
-        padding: 1.5rem;
-        background: #ffffff;
-    }
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 1.5rem;
+    background: var(--container2-bg);  /* <- ici */
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+    
 
     .name-container2 {
         text-align: center;
@@ -53,7 +58,7 @@
     .name2 {
         font-size: 1.5rem;
         letter-spacing: 1px;
-        color: #000000;
+        color: var(--name-color);
         margin: 0;
     }
 
@@ -83,8 +88,10 @@
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
+        background-color: var(--bs-body-bg);
+        color: var(--bs-body-color);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.1);
     }
 
     .card:hover {
@@ -102,9 +109,9 @@
     .card h3 {
         text-align: center;
         font-size: 1.2rem;
-        color: #333;
+        color: var(--name-color);
         padding: 15px 0;
-        background-color: #f4f4f4;
+        background: var(--container2-bg);
         margin: 0;
     }
 
@@ -114,7 +121,6 @@
         display: block;
     }
 
-    /* Ajustements pour petits écrans */
     @media (max-width: 600px) {
         .name-container {
             padding-top: 40px;

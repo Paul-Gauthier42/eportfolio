@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<html lang="fr" data-bs-theme="light">
     <head>
          
         <meta charset="UTF-8">
@@ -42,7 +43,9 @@
                         </div>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">mode</button>
+                        <button class="btn btn-secondary my-2 my-sm-0" type="button" id="btnSwitch">
+                        mode
+                        </button>
                     </form>
                     </div>
                 </div>
@@ -61,11 +64,36 @@
                     document.getElementById("myDropdown").style.display = "none";
                     }
                 }
+                   const btn = document.getElementById('btnSwitch');
+
+    btn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-bs-theme', newTheme);
+    });
             </script>
     </head> 
     <body>
     {% block body %}{% endblock %}
     <style>
+    :root {
+    --container2-bg-light: #ffffff;
+    --container2-bg-dark: #1e1e1e;
+
+    /* Couleurs du texte .name */
+    --name-color-light: #000000;
+    --name-color-dark: #ffffff;
+  }
+
+  :root[data-bs-theme="light"] {
+    --container2-bg: var(--container2-bg-light);
+    --name-color: var(--name-color-light);
+  }
+
+  :root[data-bs-theme="dark"] {
+    --container2-bg: var(--container2-bg-dark);
+    --name-color: var(--name-color-dark);
+  }
     /* Pied de page */
         footer {
             background-color: #333;
@@ -136,9 +164,9 @@
     <footer>
         <p>&copy; 2025 Mon Site Web - Tous droits réservés.</p>
         <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
+            <a href="#">Linkedin</a>
             <a href="#">Instagram</a>
+            <a href="https://github.com/Paul-Gauthier42">GitHub</a>
         </div>
         <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
     </footer>
