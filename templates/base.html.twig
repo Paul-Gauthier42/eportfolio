@@ -1,174 +1,134 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr" data-bs-theme="light">
-    <head>
-         
-        <meta charset="UTF-8">
-        <title>{% block title %}Paul Gauthier{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-         <link rel= "stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Paul Gauthier{% endblock %}</title>
 
-        {% block javascripts %}
-        {% endblock %}
-            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Eportfolio</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                        <a class="nav-link active" href="http://127.0.0.1:8000/blog">Home
-                            <span class="visually-hidden">(current)</span>
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:8000/loisirs">loisirs</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:8000/form">CV</a>
-                        </li>
-                        <div class="dropdown">
-                        <button class="dropdown-btn" onclick="toggleDropdown()">competence ▼</button>
-                        <div class="dropdown-content" id="myDropdown">
-                        <a href="http://127.0.0.1:8000/com#SAE1.01">SAE1.01</a>
-                        <a href="http://127.0.0.1:8000/com#SAE1.02">SAE1.02</a>
-                        <a href="http://127.0.0.1:8000/com#SAE1.03">SAE1.03</a>
-                        <a href="http://127.0.0.1:8000/com#SAE1.04">SAE1.04</a>
-                        <a href="http://127.0.0.1:8000/com#SAE1.05">SAE1.05</a>
-                        </div>
-                        </div>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="button" id="btnSwitch">
-                        mode
-                        </button>
-                    </form>
-                    </div>
-                </div>
-            </nav>
-            <script>
-                function toggleDropdown() {
-                    document.getElementById("myDropdown").style.display =
-                    document.getElementById("myDropdown").style.display === "block"
-                        ? "none"
-                        : "block";
-                }
+    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
 
-                // Ferme le menu si on clique ailleurs
-                window.onclick = function(e) {
-                    if (!e.target.matches('.dropdown-btn')) {
-                    document.getElementById("myDropdown").style.display = "none";
-                    }
-                }
-                   const btn = document.getElementById('btnSwitch');
+    {% block stylesheets %}{% endblock %}
 
-    btn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-bs-theme', newTheme);
-    });
-            </script>
-    </head> 
-    <body>
-    {% block body %}{% endblock %}
     <style>
-    :root {
-    --container2-bg-light: #ffffff;
-    --container2-bg-dark: #1e1e1e;
+        :root {
+            --container2-bg-light: #ffffff;
+            --container2-bg-dark: #1e1e1e;
+            --name-color-light: #000000;
+            --name-color-dark: #ffffff;
+        }
+        :root[data-bs-theme="light"] {
+            --container2-bg: var(--container2-bg-light);
+            --name-color: var(--name-color-light);
+        }
+        :root[data-bs-theme="dark"] {
+            --container2-bg: var(--container2-bg-dark);
+            --name-color: var(--name-color-dark);
+        }
 
-    /* Couleurs du texte .name */
-    --name-color-light: #000000;
-    --name-color-dark: #ffffff;
-  }
-
-  :root[data-bs-theme="light"] {
-    --container2-bg: var(--container2-bg-light);
-    --name-color: var(--name-color-light);
-  }
-
-  :root[data-bs-theme="dark"] {
-    --container2-bg: var(--container2-bg-dark);
-    --name-color: var(--name-color-dark);
-  }
-    /* Pied de page */
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
             width: 100%;
-            position: relative; /* Positionnement normal dans la flexbox */
+            position: relative;
         }
-
         footer a {
             color: #ddd;
             text-decoration: none;
             margin: 0 10px;
         }
-
         footer a:hover {
             color: #fff;
         }
-
         footer p {
             margin: 10px 0;
             font-size: 14px;
         }
-
         footer .social-icons {
             margin-top: 10px;
         }
-
         footer .social-icons a {
             font-size: 18px;
             margin: 0 15px;
         }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-btn {
-    padding: 10px 15px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    color: black;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
     </style>
-    <footer>
-        <p>&copy; 2025 Mon Site Web - Tous droits réservés.</p>
-        <div class="social-icons">
-            <a href="#">Linkedin</a>
-            <a href="#">Instagram</a>
-            <a href="https://github.com/Paul-Gauthier42">GitHub</a>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Eportfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="http://127.0.0.1:8000/blog">
+                        Home <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/loisirs">Loisirs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/form">CV</a>
+                </li>
+
+                <!-- Dropdown Bootstrap responsive -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="competenceDropdown"
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Compétences
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="competenceDropdown">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/com#SAE1.01">SAE1.01</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/com#SAE1.02">SAE1.02</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/com#SAE1.03">SAE1.03</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/com#SAE1.04">SAE1.04</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/com#SAE1.05">SAE1.05</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="d-flex">
+                <button class="btn btn-secondary my-2 my-sm-0" type="button" id="btnSwitch">
+                    mode
+                </button>
+            </form>
         </div>
-        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
-    </footer>
-    </body>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<footer>
+    <p>&copy; 2025 Mon Site Web - Tous droits réservés.</p>
+    <div class="social-icons">
+        <a href="#">Linkedin</a>
+        <a href="#">Instagram</a>
+        <a href="https://github.com/Paul-Gauthier42">GitHub</a>
+    </div>
+    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script>
+    const btn = document.getElementById('btnSwitch');
+    btn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-bs-theme', newTheme);
+    });
+</script>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>
