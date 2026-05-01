@@ -122,21 +122,164 @@
       <div class="bloc-texte"><h4>Mon ressentie</h4><br>Cette activité m’a laissé un ressenti plutôt mitigé.​ Elle m’a été utile pour apprendre à me présenter en ligne, mais certains aspects (comme la mise en forme ou la partie technique du site) m’ont semblé parfois répétitifs ou moins intéressants que d’autres travaux plus concrets en réseau ou en cybersécurité.</div>
     </div>
   </div>
-    <div class="container">
-    <div class="top-section">
-      <img src="{{ asset('image/SAE1.05.jpg') }}" alt="Image" />
-      <div class="texte-droite">
-        <h2 id = "SAE1.05">SAE 1.05</h2>
-      <p>Cette SAÉ avait pour objectif de nous faire créer un portfolio en ligne afin de nous présenter sur Internet de manière professionnelle</p>
-      </div>
-    </div>
-
-    <div class="text-zone">
-      <div class="bloc-texte"><h4>Travail realisé</h4>text</div>
-      <div class="bloc-texte"><h4>Competence dévelopé</h4>text</div>
-      <div class="bloc-texte"><h4>Mon ressentie</h4>text</div>
+<div class="container">
+  <div class="top-section">
+    <img src="{{ asset('image/SAE1.05.jpg') }}" alt="Image" />
+    <div class="texte-droite">
+      <h2 id="SAE1.05">SAE 1.05</h2>
+      <p>Cette SAÉ avait pour objectif d'analyser un fichier réseau issu de la commande tcpdump afin d'identifier deux activités suspectes saturant le réseau d'une entreprise, en utilisant Python et Excel pour traiter les données.</p>
     </div>
   </div>
+
+  <div class="text-zone">
+    <div class="bloc-texte">
+      <h4>Travail realisé</h4><br>
+      Durant cette SAÉ, nous avons d'abord suivi des TP de prise en main du traitement de données en Python (avec Spyder) et sous Excel. Une fois ces bases acquises, nous avons développé un ou deux programmes Python capables d'analyser automatiquement un fichier texte issu de tcpdump : extraction des informations pertinentes, affichage des résultats dans une page web en Markdown et export d'un fichier CSV exploitable sous Excel.<br><br>
+      Nous avons ensuite utilisé ce fichier CSV dans Excel pour produire des graphiques et mettre en évidence les deux activités suspectes à l'origine de la saturation du réseau. L'ensemble du code a été hébergé sur GitHub, et nous avons rédigé une notice d'utilisation en anglais afin que les équipes du site en Inde puissent l'utiliser de façon autonome. Le projet s'est conclu par une présentation orale de 12 minutes avec démonstration.
+    </div>
+    <div class="bloc-texte">
+      <h4>Competence dévelopé</h4><br>
+      <a href="https://docs.google.com/spreadsheets/d/1-dbpK9jeVAZWOF1cKAACDQFW_LVRO_pUHZ22I7x7P_E/edit?usp=sharing">
+        AC13.01 Utiliser un système informatique et ses outils.<br><br>
+        AC13.02 Lire, exécuter, corriger et modifier un programme.<br><br>
+        AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné.<br><br>
+        AC13.04 Connaître l'architecture et les technologies d'un site Web.<br><br>
+        AC13.05 Choisir les mécanismes de gestion de données adaptés au développement de l'outil.<br><br>
+        AC13.06 S'intégrer dans un environnement propice au développement et au travail collaboratif.
+      </a>
+    </div>
+    <div class="bloc-texte">
+      <h4>Mon ressentie</h4><br>
+      Cette SAÉ m'a semblé à la fois stimulante et formatrice. Le fait de partir d'un problème concret — un réseau qui sature pour des raisons inconnues — et de devoir écrire des programmes pour l'identifier rendait le travail vraiment motivant. J'ai apprécié découvrir la puissance du traitement de données en Python, et voir les résultats prendre forme dans Excel ou une page web donnait une vraie satisfaction. La rédaction de la notice en anglais était un exercice utile pour se préparer à un contexte professionnel international.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="top-section">
+    <img src="{{ asset('image/SAE2.01.jpg') }}" alt="Image" />
+    <div class="texte-droite">
+      <h2 id="SAE2.01">SAE 2.01</h2>
+      <p>Cette SAÉ avait pour objectif de concevoir et déployer un réseau d'entreprise multi-sites complet, intégrant des VLAN, un plan d'adressage VLSM, du routage inter-VLAN, du routage dynamique RIP, du NAT et des ACL, aussi bien en simulation Packet Tracer qu'en maquette physique.</p>
+    </div>
+  </div>
+
+  <div class="text-zone">
+    <div class="bloc-texte">
+      <h4>Travail realisé</h4><br>
+      Durant cette SAÉ, nous avons conçu un réseau complet pour une école avec 4 sites (LAN) interconnectés. Nous avons d'abord élaboré un plan d'adressage IP optimisé en VLSM à partir de la plage 172.16.0.0/16, en définissant 5 VLAN par site (admin, services, formation_A, formation_B, enseignants). Nous avons ensuite sélectionné et justifié le matériel nécessaire, puis simulé toute la topologie sur Packet Tracer.<br><br>
+      Nous avons configuré les switches , mis en place le routage inter-VLAN, puis le routage inter-sites via RIP. Nous avons aussi configuré le NAT pour permettre aux 4 sites de sortir sur le WAN avec une adresse publique du réseau 161.3.36.32/28, et mis en place des ACL pour sécuriser les accès entre VLAN.<br><br>
+      Enfin, nous avons réalisé la maquette physique en salle de TP, déployé un serveur WEB et un serveur TFTP en virtualisation, et présenté notre travail à l'oral en 5 minutes avec démonstration.
+    </div>
+    <div class="bloc-texte">
+      <h4>Competence dévelopé</h4><br>
+      <a href="https://docs.google.com/spreadsheets/d/1-dbpK9jeVAZWOF1cKAACDQFW_LVRO_pUHZ22I7x7P_E/edit?usp=sharing">
+        AC11.02 Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet.<br><br>
+        AC11.03 Configurer les fonctions de base du réseau local.<br><br>
+        AC11.05 Savoir identifier les dysfonctionnements du réseau local.<br><br>
+        AC11.06 Installer un poste client, expliquer la procédure mise en place.<br><br>
+      </a>
+    </div>
+    <div class="bloc-texte">
+      <h4>Mon ressentie</h4><br>
+      Cette SAÉ a été l'une des plus complètes et des plus enrichissantes de mon semestre. Elle m'a permis de mobiliser un grand nombre de compétences réseau en même temps : adressage, VLAN, routage, sécurité avec les ACL et NAT. La présentation orale finale m'a aussi aidé à mieux structurer et expliquer mon travail.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="top-section">
+    <img src="{{ asset('image/SAE2.02.jpg') }}" alt="Image" />
+    <div class="texte-droite">
+      <h2 id="SAE2.02">SAE 2.02</h2>
+      <p>Cette SAÉ avait pour objectif de concevoir un dispositif de détection de fréquence sous environnement Arduino, capable de détecter la présence de frelons asiatiques (~160 Hz) via un capteur acoustique, en implémentant des filtres numériques et une détection synchrone.</p>
+    </div>
+  </div>
+
+  <div class="text-zone">
+    <div class="bloc-texte">
+      <h4>Travail realisé</h4><br>
+      Durant cette SAÉ, nous avons conçu un système de traitement numérique du signal sur carte Arduino Uno. Nous avons d'abord étudié la chaîne de traitement complète : capteur acoustique → convertisseur analogique-numérique (CAN) → détecteur de fréquence → filtre passe-bas → affichage LED.<br><br>
+      Nous avons implémenté des filtres numériques (passe-bas, passe-haut et passe-bande) en appliquant la méthode d'Euler pour discrétiser les équations différentielles analogiques. Nous avons ensuite programmé ces filtres en C/Arduino et validé leur fonctionnement grâce au traceur série et à une application génératrice de tonalités sur téléphone.<br><br>
+      Le projet s'est conclu par la réalisation complète du détecteur de frelon asiatique et de drone.
+    </div>
+    <div class="bloc-texte">
+      <h4>Competence dévelopé</h4><br>
+      <a href="https://docs.google.com/spreadsheets/d/1-dbpK9jeVAZWOF1cKAACDQFW_LVRO_pUHZ22I7x7P_E/edit?usp=sharing">
+        AC12.01 Mesurer et analyser les signaux .<br><br>
+        AC12.02 Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement .<br><br>
+        AC13.02 Lire, exécuter, corriger et modifier un programme .<br><br>
+      </a>
+    </div>
+    <div class="bloc-texte">
+      <h4>Mon ressentie</h4><br>
+      Cette SAÉ m'a semblé différente et originale par rapport aux autres. Mêler traitement du signal, mathématiques et programmation embarquée sur Arduino était un exercice inhabituel pour moi. Au départ, les équations différentielles et la méthode d'Euler me paraissaient abstraites, mais voir le filtre fonctionner en temps réel sur le traceur série et la LED s'allumer au bon moment rendait le tout très concret et satisfaisant. C'est une SAÉ qui m'a ouvert les yeux sur les applications réelles du traitement numérique du signal.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="top-section">
+    <img src="{{ asset('image/SAE2.3.jpg') }}" alt="Image" />
+    <div class="texte-droite">
+      <h2 id="SAE2.3">SAE 2.3</h2>
+      <p>Cette SAÉ avait pour objectif de mettre en place une solution informatique complète pour une entreprise fictive, en déployant un site WordPress et un site Symfony dans des conteneurs Docker, avec une application de gestion de commandes connectée à une base de données MariaDB.</p>
+    </div>
+  </div>
+
+  <div class="text-zone">
+    <div class="bloc-texte">
+      <h4>Travail realisé</h4><br>
+      Durant cette SAÉ, nous avons construit un environnement de développement complet basé sur Docker, orchestré via Docker Compose, incluant un conteneur WordPress, un conteneur Symfony, une base de données MariaDB et phpMyAdmin. L'ensemble devait pouvoir être recréé sur n'importe quel PC muni de Docker grâce à un script PowerShell et des fichiers de sauvegarde.<br><br>
+      Nous avons développé une application de devis en ligne permettant à un client de sélectionner des prestations depuis un formulaire, de valider sa commande, et de la faire enregistrer en base de données. Une page dédiée listait ensuite toutes les commandes passées, triées par nom de client. Nous avons conçu la structure de la base de données (diagramme entité-association), créé les tables via phpMyAdmin, et développé les scripts PHP ou Symfony pour gérer les interactions.<br><br>
+      Nous avons également personnalisé le site WordPress pour en faire une vitrine professionnelle, et rédigé un compte rendu de la démarche directement dans le blog WordPress. La présentation finale s'est faite en reconstruisant l'environnement en direct depuis le fichier zip.
+    </div>
+    <div class="bloc-texte">
+      <h4>Competence dévelopé</h4><br>
+      <a href="https://docs.google.com/spreadsheets/d/1-dbpK9jeVAZWOF1cKAACDQFW_LVRO_pUHZ22I7x7P_E/edit?usp=sharing">
+        AC13.01 Utiliser un système informatique et ses outils.<br><br>
+        AC13.02 Lire, exécuter, corriger et modifier un programme.<br><br>
+        AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné.<br><br>
+        AC13.04 Connaître l'architecture et les technologies d'un site Web.<br><br>
+        AC13.05 Choisir les mécanismes de gestion de données adaptés au développement de l'outil.<br><br>
+        AC13.06 S'intégrer dans un environnement propice au développement et au travail collaboratif.
+      </a>
+    </div>
+    <div class="bloc-texte">
+      <h4>Mon ressentie</h4><br>
+      Cette SAÉ a été l'une des plus complètes et des plus proches d'un vrai contexte professionnel. Devoir tout orchestrer avec Docker — le serveur web, la base de données, le CMS — m'a vraiment donné l'impression de construire quelque chose de concret et de déployable. La partie base de données et formulaire de commande était la plus technique, mais aussi la plus satisfaisante une fois fonctionnelle. Le fait de tout présenter en reconstruisant l'environnement en direct était un vrai défi, mais formateur.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="top-section">
+    <img src="{{ asset('image/SAE2.04.jpg') }}" alt="Image" />
+    <div class="texte-droite">
+      <h2 id="SAE2.04">SAE 2.04</h2>
+      <p>Cette SAÉ était un projet intégratif simulant un poste d'informaticien dans un atelier d'artistes. Elle couvrait la mise en place d'un serveur Linux, d'un site web, d'un serveur de fichiers Samba, d'un service DNS, d'une œuvre Python et d'un serveur téléphonique VoIP.</p>
+    </div>
+  </div>
+
+  <div class="text-zone">
+    <div class="bloc-texte">
+      <h4>Travail realisé</h4><br>
+      Durant cette SAÉ, j'ai déployé un serveur Linux sur la baie de virtualisation de l'entreprise, sur lequel j'ai hébergé un site web affichant deux œuvres d'art. J'ai ensuite créé une œuvre générée en Python à partir de l'analyse d'images, que j'ai publiée sur ce même serveur.<br><br>
+      J'ai configuré un serveur de fichiers Samba avec des droits différenciés : les artistes pouvaient collaborer entre eux mais n'avaient pas accès aux dossiers des comptables, et vice versa. J'ai également mis en place un service DNS pour simplifier l'accès aux ressources sans avoir à mémoriser les adresses IP.<br><br>
+      Enfin, j'ai installé et configuré un serveur téléphonique VoIP avec un serveur vocal interactif. J'ai rédigé un compte rendu à chaque étape et présenté une partie du projet à l'oral pendant 10 minutes, avec une diapositive en anglais.
+    </div>
+    <div class="bloc-texte">
+      <h4>Competence dévelopé</h4><br>
+      <a href="https://docs.google.com/spreadsheets/d/1-dbpK9jeVAZWOF1cKAACDQFW_LVRO_pUHZ22I7x7P_E/edit?usp=sharing">
+        AC11.04 Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis.<br><br>
+        AC12.04 Connecter les systèmes de ToIP.<br><br>
+        AC12.05 Communiquer avec un tiers et adapter son discours.<br><br>
+        AC13.02 Lire, exécuter, corriger et modifier un programme.<br><br>
+        AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné.<br><br>
+        AC13.04 Connaître l'architecture et les technologies d'un site Web.
+      </a>
+    </div>
+    <div class="bloc-texte">
+      <h4>Mon ressentie</h4><br>
+Cette SAÉ était correcte dans l'ensemble. J'ai apprécié toucher à des technologies variées comme le DNS, Samba ou la VoIP, ce qui donnait une bonne vision de ce que peut faire un administrateur système au quotidien. Cependant, la quantité de travail demandée en individuel rendait l'ensemble assez dense, et certaines parties manquaient de profondeur faute de temps. Un projet intéressant, mais un peu trop chargé pour être pleinement satisfaisant.    </div>
+  </div>
+</div>
   <br><br><br><br><br>
 </body>
 {% endblock %}
