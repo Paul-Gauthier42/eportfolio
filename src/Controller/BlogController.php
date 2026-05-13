@@ -8,8 +8,8 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class BlogController extends AbstractController
 {
-
-    #[Route('/', name: 'root')]
+    
+    #[Route('/blog', name: 'app_blog')]
     public function index(): Response
     {
         return $this->render('blog/index.html.twig', [
@@ -47,6 +47,13 @@ final class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
+
+    #[Route('/', name: 'root')]
+    public function root(): Response
+    {
+        return $this->redirectToRoute('app_blog');
+    }
+
 
     
 }
